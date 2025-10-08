@@ -4,8 +4,11 @@ import GestorProductos from "../../assets/GestorProductos.png";
 import HeroesApp from "../../assets/HeroesApp.png";
 import Ecommerce from "../../assets/Ecommerce.png";
 import Cocktelia from "../../assets/Cocktelia.png";
+import { useState } from "react";
 
 export const Projects = () => {
+
+  const [techExpanded, setTechExpanded] = useState(false);
   return (
     <section
       id="projects"
@@ -32,11 +35,11 @@ export const Projects = () => {
 
             <div className="p-3 flex flex-col flex-1">
 
-              <div className="flex flex-col flex-1 group max-h-36 hover:max-h-[500px] overflow-hidden transition-all duration-300">
+              <div className="flex flex-col">
                 <h3 className="text-xl text-gray-700 font-bold mb-2">
                   To-Do List App
                 </h3>
-                <p className="text-gray-500 mb-4 line-clamp-3 group-hover:line-clamp-none transition-all duration-400">
+                <p className="text-gray-500 mb-4">
                   Aplicación web para la gestión de tareas y sprints, desarrollada en la Tecnicatura en Programación - UTN.
                 </p>
               </div>
@@ -66,6 +69,7 @@ export const Projects = () => {
           </div>
 
           {/*E-COMMERCE*/}
+
           <div className="rounded-xl border border-gray-300 hover:-translate-y-1
          hover:border-[#BCED09] hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition h-full flex flex-col">
 
@@ -85,23 +89,40 @@ export const Projects = () => {
                 </p>
               </div>
 
-              <div className="flex justify-center flex-wrap gap-2 mb-4">
-                {["React - TS", "Redux Toolkit", "Axios", "Tailwind-CSS", "MercadoPago SDK", "JWT", "Java", "SpringBoot", "MySQL"].map((tech, key) => (
-                  <span
-                    className="bg-[#d8ebb1] text-gray-700 py-1 px-3 rounded-full text-sm 
-            hover:bg-[rgba(188,237,9,0.61)] hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all"
-                    key={key}
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
+              <div className="mb-2">
+  <div
+    className={`flex flex-wrap gap-2 items-center transition-all duration-300 ${
+      !techExpanded ? 'max-h-[4.5rem] overflow-hidden' : ''
+    }`}
+  >
+    {["React - TS", "Redux Toolkit", "Axios", "Tailwind-CSS", "Java", "SpringBoot", "MySQL", "JWT", "MercadoPago SDK"]
+      .slice(0, techExpanded ? undefined : 5) 
+      .map((tech, key) => (
+        <span
+          className="bg-[#d8ebb1] text-gray-700 py-1 px-3 rounded-full text-sm 
+          hover:bg-[rgba(188,237,9,0.61)] hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all"
+          key={key}
+        >
+          {tech}
+        </span>
+      ))}
+
+    <span
+      onClick={() => setTechExpanded(!techExpanded)}
+      className="w-8 h-8 rounded-full bg-[#d8ebb1] text-gray-700 
+      hover:bg-[rgba(188,237,9,0.61)] hover:cursor-pointer transition-all flex items-center justify-center text-sm"
+      aria-label={techExpanded ? "Mostrar menos" : "Mostrar más"}
+    >
+      {techExpanded ? '−' : '+'}
+    </span>
+  </div>
+</div>
 
               <div className="flex justify-center items-center mt-auto">
-                <a
-                  href="https://github.com/Fix404/Final-metodologia-frontend.git"
-                  className="text-[#344141] hover:text-[#ff6750] transition-colors pt-2"
-                >
+
+                <a href="https://github.com/Fix404/Final-metodologia-frontend.git"
+                  className="text-[#344141] hover:text-[#ff6750] transition-colors pt-4">
+
                   <FaGithub size={32} />
                 </a>
               </div>
@@ -110,7 +131,7 @@ export const Projects = () => {
 
           {/* HEROES APP */}
           <div className="rounded-xl border border-gray-300 hover:-translate-y-1
-         hover:border-[#BCED09] hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition h-full flex flex-col">
+hover:border-[#BCED09] hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition h-full flex flex-col">
 
             <div>
               <img
@@ -121,10 +142,10 @@ export const Projects = () => {
             </div>
 
             <div className="p-3 flex flex-col flex-1">
-              <div className="flex flex-col flex-1 group max-h-36 hover:max-h-[500px] overflow-hidden transition-all duration-300">
+              <div className="flex flex-col group max-h-36 hover:max-h-[500px] overflow-hidden transition-all duration-300">
                 <h3 className="text-xl text-gray-700 font-bold mb-2">Heroes App</h3>
                 <p className="text-gray-500 mb-4 line-clamp-3 group-hover:line-clamp-none transition-all duration-400">
-                  Galería de héroes filtrable por Marvel o DC, con detalles específicos de cada personaje.                  Desarrollada en la Tecnicatura en Programación - UTN.
+                  Galería de héroes filtrable por Marvel o DC, con detalles específicos de cada personaje. Desarrollada en la Tecnicatura en Programación - UTN.
                 </p>
               </div>
 
@@ -132,7 +153,7 @@ export const Projects = () => {
                 {["React", "TypeScript", "Node.js", "Redux", "CSS"].map((tech, key) => (
                   <span
                     className="bg-[#d8ebb1] text-gray-700 py-1 px-3 rounded-full text-sm 
-            hover:bg-[rgba(188,237,9,0.61)] hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all"
+                   hover:bg-[rgba(188,237,9,0.61)] hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all"
                     key={key}
                   >
                     {tech}
@@ -141,8 +162,8 @@ export const Projects = () => {
               </div>
 
               <div className="flex justify-center items-center mt-auto">
-                <a
-                  href="https://github.com/SophieRF/heroesApp.git"
+
+                <a href="https://github.com/SophieRF/heroesApp.git"
                   className="text-[#344141] hover:text-[#ff6750] transition-colors pt-2"
                 >
                   <FaGithub size={32} />
@@ -150,7 +171,7 @@ export const Projects = () => {
               </div>
             </div>
           </div>
-          
+
           {/* GESTOR COMERCIAL */}
           <div className="rounded-xl border border-gray-300 hover:-translate-y-1
          hover:border-[#BCED09] hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition h-full flex flex-col">
@@ -201,7 +222,7 @@ export const Projects = () => {
 
             <div>
               <img
-                className="w-full h-36 object-cover rounded-xl rounded-b-none"
+                className="w-full h-35 object-cover rounded-xl rounded-b-none"
                 src={Cocktelia}
                 alt="Cocktelia"
               />

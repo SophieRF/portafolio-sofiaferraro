@@ -26,7 +26,7 @@ export const CopyText: React.FC<CopyTextProps> = ({ text }) => {
             >
                 {text}
             </button>
-            {copied && <span className="ml-2 text-[#99C73F]">Copiado!</span>}
+            {copied && <span className="ml-2 text-[#6a9b07]">Copiado!</span>}
         </div>
     );
 }
