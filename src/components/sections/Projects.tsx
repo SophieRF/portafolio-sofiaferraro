@@ -65,30 +65,28 @@ export const Projects = () => {
             </div>
           </div>
 
-
-          {/* GESTOR COMERCIAL */}
+          {/*E-COMMERCE*/}
           <div className="rounded-xl border border-gray-300 hover:-translate-y-1
          hover:border-[#BCED09] hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition h-full flex flex-col">
 
             <div>
               <img
                 className="rounded-xl rounded-b-none"
-                src={GestorProductos}
-                alt="Gestor Comercial"
+                src={Ecommerce}
+                alt="E-commerce"
               />
             </div>
 
             <div className="p-3 flex flex-col flex-1">
               <div className="flex flex-col flex-1 group max-h-36 hover:max-h-[500px] overflow-hidden transition-all duration-300">
-                <h3 className="text-xl text-gray-700 font-bold mb-2">Gestor Comercial</h3>
+                <h3 className="text-xl text-gray-700 font-bold mb-2">E-commerce Indumentaria</h3>
                 <p className="text-gray-500 mb-4 line-clamp-3 group-hover:line-clamp-none transition-all duration-400">
-                  Aplicación web para gestionar comercios, sus sucursales, productos y categorías asociadas.
-                  Desarrollada en la Tecnicatura en Programación - UTN.
+                  E-commerce de indumentaria con login, panel admin y funciones clave de tienda online. Desarrollada en la Tecnicatura en Programación - UTN.
                 </p>
               </div>
 
               <div className="flex justify-center flex-wrap gap-2 mb-4">
-                {["React", "TypeScript", "Node.js", "Redux", "CSS - Bootstrap"].map((tech, key) => (
+                {["React - TS", "Redux Toolkit", "Axios", "Tailwind-CSS", "MercadoPago SDK", "JWT", "Java", "SpringBoot", "MySQL"].map((tech, key) => (
                   <span
                     className="bg-[#d8ebb1] text-gray-700 py-1 px-3 rounded-full text-sm 
             hover:bg-[rgba(188,237,9,0.61)] hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all"
@@ -101,7 +99,7 @@ export const Projects = () => {
 
               <div className="flex justify-center items-center mt-auto">
                 <a
-                  href="https://github.com/Fix404/Proyecto_final_SustanciaX.git"
+                  href="https://github.com/Fix404/Final-metodologia-frontend.git"
                   className="text-[#344141] hover:text-[#ff6750] transition-colors pt-2"
                 >
                   <FaGithub size={32} />
@@ -152,29 +150,30 @@ export const Projects = () => {
               </div>
             </div>
           </div>
-
-          {/*E-COMMERCE*/}
+          
+          {/* GESTOR COMERCIAL */}
           <div className="rounded-xl border border-gray-300 hover:-translate-y-1
          hover:border-[#BCED09] hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition h-full flex flex-col">
 
             <div>
               <img
                 className="rounded-xl rounded-b-none"
-                src={Ecommerce}
-                alt="E-commerce"
+                src={GestorProductos}
+                alt="Gestor Comercial"
               />
             </div>
 
             <div className="p-3 flex flex-col flex-1">
               <div className="flex flex-col flex-1 group max-h-36 hover:max-h-[500px] overflow-hidden transition-all duration-300">
-                <h3 className="text-xl text-gray-700 font-bold mb-2">E-commerce Indumentaria</h3>
+                <h3 className="text-xl text-gray-700 font-bold mb-2">Gestor Comercial</h3>
                 <p className="text-gray-500 mb-4 line-clamp-3 group-hover:line-clamp-none transition-all duration-400">
-                  E-commerce de indumentaria con login, panel admin y funciones clave de tienda online. Desarrollada en la Tecnicatura en Programación - UTN.
+                  Aplicación web para gestionar comercios, sus sucursales, productos y categorías asociadas.
+                  Desarrollada en la Tecnicatura en Programación - UTN.
                 </p>
               </div>
 
               <div className="flex justify-center flex-wrap gap-2 mb-4">
-                {["React - TS", "Redux Toolkit", "Axios", "Tailwind-CSS", "MercadoPago SDK", "JWT", "Java", "SpringBoot", "MySQL"].map((tech, key) => (
+                {["React", "TypeScript", "Node.js", "Redux", "CSS - Bootstrap"].map((tech, key) => (
                   <span
                     className="bg-[#d8ebb1] text-gray-700 py-1 px-3 rounded-full text-sm 
             hover:bg-[rgba(188,237,9,0.61)] hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all"
@@ -187,7 +186,7 @@ export const Projects = () => {
 
               <div className="flex justify-center items-center mt-auto">
                 <a
-                  href="https://github.com/Fix404/Final-metodologia-frontend.git"
+                  href="https://github.com/Fix404/Proyecto_final_SustanciaX.git"
                   className="text-[#344141] hover:text-[#ff6750] transition-colors pt-2"
                 >
                   <FaGithub size={32} />

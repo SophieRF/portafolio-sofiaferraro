@@ -3,15 +3,18 @@ export const About = () => {
   const frontendSkills = [
     "React",
     "TypeScript",
-    "TailwindCSS",
+    "Tailwind - CSS",
     "Redux Toolkit",
+    "Zustand",
+    "Dart",
+    "Flutter"
   ];
   const backendSkills = [
-    "SpringBoot",
     "Java",
+    "SpringBoot",
     "Node.js",
+    "MySQL",
     "MongoDB",
-    "MySQL"
   ];
 
   return (
