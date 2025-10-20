@@ -1,4 +1,4 @@
-import { FaWhatsapp } from "react-icons/fa"
+import { FaLinkedin, FaWhatsapp } from "react-icons/fa"
 import { SiGmail } from "react-icons/si"
 import { CopyText } from "./CopyText"
 
@@ -15,12 +15,23 @@ export const Contact = () => {
                 </h2>
                 <div className="flex flex-col gap-4">
                     <span className="inline-flex items-center gap-2">
-                        <SiGmail color="#F54927" /> 
+                        <SiGmail color="#F54927" />
                         <CopyText text="sofiaferraro2110@gmail.com" />
                     </span>
                     <span className="inline-flex items-center gap-2">
-                        <FaWhatsapp color="#348713"/> 
+                        <FaWhatsapp color="#348713" />
                         <CopyText text="0261 2181666" />
+                    </span>
+                    <span className="inline-flex items-center gap-2">
+                        <FaLinkedin color="#0e76a8" />
+                        <a
+                            href="https://www.linkedin.com/in/sofia-ferraro-bb2471217"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-700 hover:text-[#0e76a8] transition-colors underline"
+                        >
+                            sofia-ferraro-bb2471217
+                        </a>
                     </span>
                 </div>
 
