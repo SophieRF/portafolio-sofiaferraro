@@ -4,6 +4,7 @@ export const About = () => {
     "React",
     "TypeScript",
     "Tailwind - CSS",
+    "Vite",
     "Redux Toolkit",
     "Zustand",
     "Dart",
