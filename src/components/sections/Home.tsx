@@ -10,7 +10,7 @@ export const Home = () => {
                 </h1>
 
                 <p className="text-[#22333B] text-lg mb-8 max-w-4xl mx-auto">
-                    ¡Hola! Soy Sofi, desarrolladora web Full-stack recién egresada de la Universidad Tecnológica Nacional en la Tecnicatura Universitaria en Programación. Me gusta crear aplicaciones intuitivas, armónicas y de buena estética. Mis principales cualidades son la organización y el trabajo metódico y ordenado.
+                    ¡Hola! Soy Sofi, desarrolladora web Full-stack egresada de la Universidad Tecnológica Nacional en la Tecnicatura Universitaria en Programación. Me gusta crear aplicaciones intuitivas, armónicas y de buena estética. Mis principales cualidades son la organización y el trabajo metódico y ordenado.
                 </p>
                 <div className="flex justify-center space-x-4">
                     <a
