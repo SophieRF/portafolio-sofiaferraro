@@ -30,7 +30,7 @@ export const About = () => {
 
         <div className="rounded-xl p-6 border-white/10 border hover:-translate-y-1 transition-all">
           <p className="text-gray-800 text-center mb-4">
-            Desarrolladora Full Stack, con experiencia en construcción de aplicaciones web React + SpringBoot / React + Mongo
+            Desarrolladora Full Stack, con experiencia en construcción de aplicaciones web con MERN stack y React + SpringBoot 
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
