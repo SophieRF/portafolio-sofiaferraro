@@ -23,7 +23,7 @@ export const Projects = () => {
           {" "}
           Proyectos Destacados
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-10 gap-6">
 
           {/* WEB EMPRENDIMIENTO CERÁMICA */}
           <div className="rounded-xl border border-gray-300 hover:-translate-y-1
@@ -41,36 +41,38 @@ export const Projects = () => {
 
               <div className="flex group flex-col">
                 <h3 className="text-xl text-gray-700 font-bold mb-2">
-                  Web Emprendimiento de cerámica
+                  WebSite de Emprendimiento
                 </h3>
                 <p className="text-gray-500 mb-4 line-clamp-3 group-hover:line-clamp-none transition-all duration-400">
-                  Web personalizada para emprendimiento de piezas cerámicas, con catálogo de productos, información del emprendimiento y carrito de compras.
+                  Web personalizada para emprendimiento de piezas cerámicas, con catálogo de productos, información del emprendimiento y carrito de compras. Proyecto individual.
                 </p>
               </div>
 
-              <div
-                className={`flex flex-wrap gap-2 items-center ${!ceramicaExpanded ? "max-h-[4.5rem] overflow-hidden" : ""
-                  }`}
-              >
-                {["React - TS", "Tailwind-CSS", "Zustand", "Node.js", "MongoDB", "Express", "JWT", "WatsApp Click-to-chat"]
-                  .slice(0, ceramicaExpanded ? undefined : 5)
-                  .map((tech, key) => (
-                    <span
-                      key={key}
-                      className="bg-[#d8ebb1] text-gray-700 py-1 px-3 rounded-full text-sm"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-              </div>
-
-              <div className="mt-2 flex justify-center">
-                <span
-                  onClick={() => setCeramicaExpanded(!ceramicaExpanded)}
-                  className="w-8 h-8 rounded-full bg-[#d8ebb1] text-gray-700 hover:cursor-pointer flex items-center justify-center"
+              <div className="flex gap-2 justify-center items-center mb-2">
+                <div
+                  className={`flex flex-wrap gap-2 justify-center items-center 
+                    ${!ceramicaExpanded ? "max-h-[4.5rem] overflow-hidden" : ""}`}
                 >
-                  {ceramicaExpanded ? "−" : "+"}
-                </span>
+                  {["React", "TypeScript", "Tailwind-CSS", "Zustand", "Node.js", "Axios", "MongoDB", "Express", "JWT", "WatsApp Click-to-chat"]
+                    .slice(0, ceramicaExpanded ? undefined : 6)
+                    .map((tech, key) => (
+                      <span
+                        key={key}
+                        className="bg-[#d8ebb1] hover:bg-[rgba(188,237,9,0.61)] text-gray-700 py-1 px-3 rounded-full text-sm"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                </div>
+
+                <div>
+                  <span
+                    onClick={() => setCeramicaExpanded(!ceramicaExpanded)}
+                    className="w-6 h-6 rounded-full bg-[#d8ebb1] hover:bg-[rgba(188,237,9,0.61)] text-gray-700 hover:cursor-pointer flex items-center justify-center mr-2"
+                  >
+                    {ceramicaExpanded ? "−" : "+"}
+                  </span>
+                </div>
               </div>
 
               <div className="flex flex-row gap-4 justify-center items-center mt-auto">
@@ -110,31 +112,30 @@ export const Projects = () => {
                 </p>
               </div>
 
-              <div className="mb-2">
+              <div className="mb-2 flex flex-row gap-2 justify-center items-center">
                 <div
-                  className={`flex flex-wrap gap-2 items-center ${!ecommerceExpanded ? "max-h-[4.5rem] overflow-hidden" : ""
-                    }`}
-                >
-                  {["React - TS", "Redux Toolkit", "Axios", "Tailwind-CSS", "Java", "SpringBoot", "MySQL", "JWT", "MercadoPago SDK"]
-                    .slice(0, ecommerceExpanded ? undefined : 5)
+                  className={`flex flex-wrap gap-2 justify-center items-center ${!ecommerceExpanded ? "max-h-[4.5rem] overflow-hidden" : ""
+                    }`}>
+                  {["React", "TypeScript", "Tailwind-CSS", "Java", "SpringBoot", "MySQL", "Redux Toolkit", "Axios", "JWT", "MercadoPago SDK"]
+                    .slice(0, ecommerceExpanded ? undefined : 6)
                     .map((tech, key) => (
                       <span
                         key={key}
-                        className="bg-[#d8ebb1] text-gray-700 py-1 px-3 rounded-full text-sm"
+                        className="bg-[#d8ebb1] hover:bg-[rgba(188,237,9,0.61)] text-gray-700 py-1 px-3 rounded-full text-sm"
                       >
                         {tech}
                       </span>
                     ))}
                 </div>
-
-                <div className="mt-2 flex justify-center">
+                <div>
                   <span
                     onClick={() => setEcommerceExpanded(!ecommerceExpanded)}
-                    className="w-8 h-8 rounded-full bg-[#d8ebb1] text-gray-700 hover:cursor-pointer flex items-center justify-center"
+                    className="w-6 h-6 rounded-full bg-[#d8ebb1] hover:bg-[rgba(188,237,9,0.61)] text-gray-700 hover:cursor-pointer flex items-center justify-center mr-2"
                   >
                     {ecommerceExpanded ? "−" : "+"}
                   </span>
                 </div>
+
               </div>
 
               <div className="flex justify-center items-center mt-auto">
@@ -173,7 +174,7 @@ export const Projects = () => {
 
 
               <div className="flex justify-center flex-wrap gap-2 mb-4">
-                {["React", "TypeScript", "Node.js", "Zustand", "CSS", "Json-server"].map((tech, key) => (
+                {["React", "TypeScript", "CSS", "Node.js", "Zustand"].map((tech, key) => (
                   <span
                     className="bg-[#d8ebb1] text-gray-700 py-1 px-3 rounded-full text-sm 
                    hover:bg-[rgba(188,237,9,0.61)] hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all"
@@ -288,7 +289,7 @@ hover:border-[#BCED09] hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition 
 
             <div>
               <img
-                className="w-full h-35 object-cover rounded-xl rounded-b-none"
+                className="w-full h-56 sm:h-80 md:h-46 lg:h-34 object-cover rounded-xl rounded-b-none"
                 src={Cocktelia}
                 alt="Cocktelia"
               />
